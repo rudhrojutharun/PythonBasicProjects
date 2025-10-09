@@ -1,0 +1,2 @@
+[x] Have to develop a todo app using python
+[!] Have to check the newly added feature
