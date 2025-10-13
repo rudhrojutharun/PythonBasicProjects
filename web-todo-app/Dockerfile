@@ -11,13 +11,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application code
 COPY . .
 
-# Flask runs on port 8080 by default on Cloud Run
+# Set the PORT environment variable required by Cloud Run
 ENV PORT 8080
 
-# Expose the port
-EXPOSE 8080
-
-# Command to run the application using Gunicorn (a production web server)
-# Note: We must explicitly tell Flask/Gunicorn which file to run,
-#       and we use the correct environment to enable live deployment.
+# Command to run the application using Gunicorn (production web server)
+# This command tells Gunicorn to look inside the 'todo_web_service' file
+# and find the Flask instance named 'app'.
 CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 todo_web_service:app
