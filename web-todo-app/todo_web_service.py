@@ -128,7 +128,7 @@ HTML_TEMPLATE = """
         <button onclick="authService.signOut()" class="absolute top-8 right-8 text-sm text-red-500 hover:text-red-700 font-semibold">Log Out</button>
 
         <p id="auth-status" class="text-center text-sm mb-4">
-            You are signed in.
+            You are signed in. 
         </p>
 
         <form id="add-task-form" class="flex mb-8 gap-3" onsubmit="event.preventDefault(); submitTask();">

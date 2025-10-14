@@ -1,6 +1,10 @@
 cli-todo-app/.venv/
 web-todo-app/.venv/
+gui-calculator/.venv/
+
 web-todo-app/serviceAccountKey.json
+
+
 # Ignore files created by the application (user data)
 cli-todo-app/todos.json
 cli-todo-app/todos.txt
